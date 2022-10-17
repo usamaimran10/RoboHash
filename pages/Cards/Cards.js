@@ -36,7 +36,14 @@ const Cards = () => {
       </div>
       <div className={classes.RoboCard}>
         {data.map((val) => {
-          return <RoboCard name={val.name} id={val.id} place={val.place} />;
+          return (
+            <RoboCard
+              name={val.name}
+              id={val.id}
+              place={val.place}
+              key={val.id}
+            />
+          );
         })}
       </div>
     </div>
